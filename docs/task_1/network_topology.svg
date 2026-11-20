@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1230" viewBox="0 0 1600 1230" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1600" height="1230" fill="#ffffff"/>
+
+  <text x="800" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#1f1f1f">Логическая схема сети «Умный офис» (стенд GNS3)</text>
+
+  <!-- Cisco RTR -->
+  <rect x="560" y="85" width="480" height="145" rx="14" fill="#e9e0ef" stroke="#7e57a3" stroke-width="3"/>
+  <text x="800" y="122" text-anchor="middle" font-size="25" font-weight="700" fill="#241a2e">Cisco RTR</text>
+  <text x="800" y="150" text-anchor="middle" font-size="16" fill="#3b2d49">router-on-a-stick</text>
+  <text x="800" y="182" text-anchor="middle" font-size="15" fill="#3b2d49">Gi0/0.10: 192.168.10.1   ·   Gi0/0.20: 192.168.20.1</text>
+  <text x="800" y="206" text-anchor="middle" font-size="15" fill="#3b2d49">Gi0/0.30: 192.168.30.1   ·   Gi0/0.99: 192.168.99.1</text>
+
+  <!-- Trunk -->
+  <line x1="800" y1="230" x2="800" y2="390" stroke="#7e57a3" stroke-width="6"/>
+  <text x="822" y="298" font-size="16" font-weight="600" fill="#3b2d49">Trunk 802.1Q</text>
+  <text x="822" y="321" font-size="16" fill="#3b2d49">RTR Gi0/0 ↔ SW Gi0/0</text>
+
+  <!-- Cisco SW -->
+  <rect x="560" y="390" width="480" height="145" rx="14" fill="#e9e0ef" stroke="#7e57a3" stroke-width="3"/>
+  <text x="800" y="428" text-anchor="middle" font-size="25" font-weight="700" fill="#241a2e">Cisco SW</text>
+  <text x="800" y="461" text-anchor="middle" font-size="16" fill="#3b2d49">L2, VLAN 10/20/30/99</text>
+  <text x="800" y="488" text-anchor="middle" font-size="16" fill="#3b2d49">SVI Vlan99: 192.168.99.2</text>
+
+  <!-- Distribution bus -->
+  <line x1="800" y1="535" x2="800" y2="595" stroke="#7e57a3" stroke-width="5"/>
+  <line x1="199" y1="595" x2="1401" y2="595" stroke="#7e57a3" stroke-width="5"/>
+
+  <!-- WIN -->
+  <line x1="199" y1="595" x2="199" y2="670" stroke="#6b9bd1" stroke-width="4"/>
+  <text x="199" y="652" text-anchor="middle" font-size="15" fill="#333333">Gi0/1</text>
+  <rect x="62" y="670" width="275" height="195" rx="12" fill="#dbe9f7" stroke="#6b9bd1" stroke-width="3"/>
+  <text x="199" y="713" text-anchor="middle" font-size="26" font-weight="700" fill="#16283d">WIN</text>
+  <text x="199" y="741" text-anchor="middle" font-size="14" fill="#23384f">Рабочее место администратора</text>
+  <text x="199" y="763" text-anchor="middle" font-size="14" fill="#23384f">Windows Server 2019</text>
+  <text x="199" y="796" text-anchor="middle" font-size="15" font-weight="600" fill="#23384f">VLAN 10</text>
+  <text x="199" y="830" text-anchor="middle" font-size="17" font-weight="700" fill="#16283d">192.168.10.10/24</text>
+
+  <!-- CTRL -->
+  <line x1="499" y1="595" x2="499" y2="670" stroke="#77a86b" stroke-width="4"/>
+  <text x="499" y="652" text-anchor="middle" font-size="15" fill="#333333">Gi0/2</text>
+  <rect x="362" y="670" width="275" height="195" rx="12" fill="#dcefd9" stroke="#77a86b" stroke-width="3"/>
+  <text x="499" y="713" text-anchor="middle" font-size="26" font-weight="700" fill="#1d3318">CTRL</text>
+  <text x="499" y="741" text-anchor="middle" font-size="14" fill="#2a4723">Контроллер</text>
+  <text x="499" y="763" text-anchor="middle" font-size="14" fill="#2a4723">РЕД ОС 8</text>
+  <text x="499" y="796" text-anchor="middle" font-size="15" font-weight="600" fill="#2a4723">VLAN 20</text>
+  <text x="499" y="830" text-anchor="middle" font-size="17" font-weight="700" fill="#1d3318">192.168.20.12/24</text>
+
+  <!-- MON -->
+  <line x1="799" y1="595" x2="799" y2="670" stroke="#77a86b" stroke-width="4"/>
+  <text x="799" y="652" text-anchor="middle" font-size="15" fill="#333333">Gi0/3</text>
+  <rect x="662" y="670" width="275" height="195" rx="12" fill="#dcefd9" stroke="#77a86b" stroke-width="3"/>
+  <text x="799" y="713" text-anchor="middle" font-size="26" font-weight="700" fill="#1d3318">MON</text>
+  <text x="799" y="741" text-anchor="middle" font-size="14" fill="#2a4723">Мониторинг</text>
+  <text x="799" y="763" text-anchor="middle" font-size="14" fill="#2a4723">РЕД ОС 8</text>
+  <text x="799" y="796" text-anchor="middle" font-size="15" font-weight="600" fill="#2a4723">VLAN 20</text>
+  <text x="799" y="830" text-anchor="middle" font-size="17" font-weight="700" fill="#1d3318">192.168.20.11/24</text>
+
+  <!-- DB -->
+  <line x1="1099" y1="595" x2="1099" y2="670" stroke="#c9a83c" stroke-width="4"/>
+  <text x="1099" y="652" text-anchor="middle" font-size="15" fill="#333333">Gi1/0</text>
+  <rect x="962" y="670" width="275" height="195" rx="12" fill="#f7eccc" stroke="#c9a83c" stroke-width="3"/>
+  <text x="1099" y="713" text-anchor="middle" font-size="26" font-weight="700" fill="#3a2f0f">DB</text>
+  <text x="1099" y="741" text-anchor="middle" font-size="14" fill="#4a3d16">База данных SQLite</text>
+  <text x="1099" y="763" text-anchor="middle" font-size="14" fill="#4a3d16">РЕД ОС 8</text>
+  <text x="1099" y="796" text-anchor="middle" font-size="15" font-weight="600" fill="#4a3d16">VLAN 20</text>
+  <text x="1099" y="830" text-anchor="middle" font-size="17" font-weight="700" fill="#3a2f0f">192.168.20.10/24</text>
+
+  <!-- IOT -->
+  <line x1="1399" y1="595" x2="1399" y2="670" stroke="#c96b6b" stroke-width="4"/>
+  <text x="1399" y="652" text-anchor="middle" font-size="15" fill="#333333">Gi1/1</text>
+  <rect x="1262" y="670" width="275" height="195" rx="12" fill="#f7dcdc" stroke="#c96b6b" stroke-width="3"/>
+  <text x="1399" y="713" text-anchor="middle" font-size="26" font-weight="700" fill="#3d1717">IOT</text>
+  <text x="1399" y="741" text-anchor="middle" font-size="14" fill="#4d2222">Node-RED: TEMP, HUM, FAN</text>
+  <text x="1399" y="763" text-anchor="middle" font-size="14" fill="#4d2222">РЕД ОС 8</text>
+  <text x="1399" y="796" text-anchor="middle" font-size="15" font-weight="600" fill="#4d2222">VLAN 30</text>
+  <text x="1399" y="830" text-anchor="middle" font-size="17" font-weight="700" fill="#3d1717">192.168.30.10/24</text>
+
+  <text x="120" y="898" font-size="15" font-style="italic" fill="#555555">SSH/SCP — только между машинами РЕД ОС (CTRL, MON, DB, IOT); WIN — рабочее место администратора.</text>
+
+  <!-- Addressing table -->
+  <g font-size="16">
+    <rect x="120" y="925" width="1360" height="38" fill="#e6dceb" stroke="#9c8aa8" stroke-width="1.5"/>
+    <text x="185" y="950" text-anchor="middle" font-weight="700" fill="#241a2e">VLAN</text>
+    <text x="415" y="950" text-anchor="middle" font-weight="700" fill="#241a2e">Подсеть</text>
+    <text x="720" y="950" text-anchor="middle" font-weight="700" fill="#241a2e">Хост</text>
+    <text x="1020" y="950" text-anchor="middle" font-weight="700" fill="#241a2e">IP-адрес</text>
+    <text x="1330" y="950" text-anchor="middle" font-weight="700" fill="#241a2e">Шлюз</text>
+
+    <rect x="120" y="963" width="1360" height="34" fill="#ffffff" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="986" text-anchor="middle">10</text>
+    <text x="415" y="986" text-anchor="middle">192.168.10.0/24</text>
+    <text x="720" y="986" text-anchor="middle" font-weight="600">WIN</text>
+    <text x="1020" y="986" text-anchor="middle">192.168.10.10</text>
+    <text x="1330" y="986" text-anchor="middle">192.168.10.1</text>
+
+    <rect x="120" y="997" width="1360" height="34" fill="#faf9fb" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="1020" text-anchor="middle">20</text>
+    <text x="415" y="1020" text-anchor="middle">192.168.20.0/24</text>
+    <text x="720" y="1020" text-anchor="middle" font-weight="600">DB</text>
+    <text x="1020" y="1020" text-anchor="middle">192.168.20.10</text>
+    <text x="1330" y="1020" text-anchor="middle">192.168.20.1</text>
+
+    <rect x="120" y="1031" width="1360" height="34" fill="#ffffff" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="1054" text-anchor="middle">20</text>
+    <text x="415" y="1054" text-anchor="middle">192.168.20.0/24</text>
+    <text x="720" y="1054" text-anchor="middle" font-weight="600">MON</text>
+    <text x="1020" y="1054" text-anchor="middle">192.168.20.11</text>
+    <text x="1330" y="1054" text-anchor="middle">192.168.20.1</text>
+
+    <rect x="120" y="1065" width="1360" height="34" fill="#faf9fb" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="1088" text-anchor="middle">20</text>
+    <text x="415" y="1088" text-anchor="middle">192.168.20.0/24</text>
+    <text x="720" y="1088" text-anchor="middle" font-weight="600">CTRL</text>
+    <text x="1020" y="1088" text-anchor="middle">192.168.20.12</text>
+    <text x="1330" y="1088" text-anchor="middle">192.168.20.1</text>
+
+    <rect x="120" y="1099" width="1360" height="34" fill="#ffffff" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="1122" text-anchor="middle">30</text>
+    <text x="415" y="1122" text-anchor="middle">192.168.30.0/24</text>
+    <text x="720" y="1122" text-anchor="middle" font-weight="600">IOT</text>
+    <text x="1020" y="1122" text-anchor="middle">192.168.30.10</text>
+    <text x="1330" y="1122" text-anchor="middle">192.168.30.1</text>
+
+    <rect x="120" y="1133" width="1360" height="34" fill="#faf9fb" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="1156" text-anchor="middle">10-30</text>
+    <text x="415" y="1156" text-anchor="middle">—</text>
+    <text x="720" y="1156" text-anchor="middle" font-weight="600">Cisco RTR</text>
+    <text x="1020" y="1156" text-anchor="middle">Gi0/0.X: 192.168.X.1</text>
+    <text x="1330" y="1156" text-anchor="middle">—</text>
+
+    <rect x="120" y="1167" width="1360" height="34" fill="#ffffff" stroke="#c9c1cf" stroke-width="1"/>
+    <text x="185" y="1190" text-anchor="middle">99</text>
+    <text x="415" y="1190" text-anchor="middle">192.168.99.0/24</text>
+    <text x="720" y="1190" text-anchor="middle" font-weight="600">Cisco SW</text>
+    <text x="1020" y="1190" text-anchor="middle">192.168.99.2</text>
+    <text x="1330" y="1190" text-anchor="middle">192.168.99.1</text>
+  </g>
+</svg>
