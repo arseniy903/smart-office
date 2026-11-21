@@ -29,6 +29,8 @@
 
 ![Логическая схема сети](docs/task_1/network_topology.png)
 
+![Стенд в GNS3](docs/task_1/gns3_topology.png)
+
 ![План офиса](docs/task_1/План_офиса.png)
 
 ### Адресация хостов
